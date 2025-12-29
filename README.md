@@ -12,6 +12,8 @@ Al Qadir machinery sewing machines spot guns spair parts and it's repairs
 <style>
   /* AL-QADIR MACHINERY – STYLE.CSS (Aqua Green + White Theme) */
 
+/* AL-QADIR MACHINERY – STYLE.CSS (Aqua Green + White Theme) */
+
 /* RESET */
 * {
     margin: 0;
@@ -19,72 +21,103 @@ Al Qadir machinery sewing machines spot guns spair parts and it's repairs
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color:black; /* light aqua white */
-    color:white;
-}
-
 /* NAVBAR */
-.nav-logo {
-    height: 45px;
-    border-radius: 5px;
-    border-radius: 50%;
-}
-
 .navbar {
     padding: 12px 0;
-    background-color:white;
-    color: black;
+    background-color: white !important; /* header background white */
+    color: black; /* text color black */
     height: 55px;
 }
 
 .nav-link {
-    color: white !important;
+    color: black !important; /* nav links black */
     font-weight: 500;
 }
 
 .nav-link:hover {
-    color: #006f62 !important; /* deep aqua green */
+    color: #006f62 !important; /* deep aqua green on hover */
+}
+.navbar-brand span {
+    color: black !important; /* brand text black */
+    
+}
+
+
+.header-social a:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 
 /* HERO SLIDER */
 .hero-slider {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
 }
 
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
-.slide.active {
-    opacity: 1;
+.slides.active {
+  opacity: 1;
 }
 
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
+
+.hero-content p {
+  font-size: 18px;
+}
+
+/* HERO SOCIAL ICONS */
+.hero-social {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  gap: 14px;
+  z-index: 10;
+}
+
+.hero-social a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.hero-social a:hover {
+  transform: translateY(-6px);
+}
+
+/* Brand Colors */
+.youtube { background: #FF0000; }
+.facebook { background: #1877F2; }
+.tiktok { background: #000000; }
+.linkedin { background: #0A66C2; }
+
 
 /* Simple, modern styles for the About Us section */
 
@@ -201,33 +234,7 @@ html,body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe U
 .gallery-img:hover {
     transform: scale(1.05);
 }
-.about-section {
-    background:white;
-    padding: 80px 0;
-}
 
-.about-content ul {
-    padding-left: 18px;
-}
-
-.about-content ul li {
-    margin-bottom: 6px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
-    h3 { font-size: 1.3rem; }
-
-    p, li {
-        font-size: 14px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-}
 /* CONTACT */
 .contact-section {
     padding: 70px 0;
@@ -263,6 +270,43 @@ html,body { height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe U
     margin-bottom: 10px;
     border-radius: 50%;
 }
+
+/* FOOTER SOCIAL ICONS */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: #006f62;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #00e5d4;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* Individual brand hover (optional) */
+.footer-social .youtube:hover { background: #ff0000; }
+.footer-social .facebook:hover { background: #1877f2; }
+.footer-social .tiktok:hover { background: #000; }
+.footer-social .linkedin:hover { background: #0a66c2; }
+
+
+
 
 
 
